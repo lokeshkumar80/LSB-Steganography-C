@@ -19,11 +19,15 @@ Decoded: hello lokesh
 
 📸 Visual Proof
 
-Original Image
-[original.bmp](https://github.com/user-attachments/files/27043032/original.bmp)
+### Original Image
+![Original](outputs/original.png)
+<img width="640" height="426" alt="original" src="https://github.com/user-attachments/assets/38539a05-a0e5-4bcd-9a6a-1a4c07935c9f" />
 
-Encoded Image
-[out.bmp](https://github.com/user-attachments/files/27043039/out.bmp)
+
+### Encoded Image
+![Encoded](outputs/out.png)
+<img width="640" height="426" alt="out" src="https://github.com/user-attachments/assets/8b67f3dd-8365-4261-97e5-3ebbc855d2bc" />
+
 
 👉 Images appear identical — hidden data is invisible to the human eye.
 
