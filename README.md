@@ -3,7 +3,6 @@
 
 A modular **C-based steganography system** that hides encrypted messages inside images using **Least Significant Bit (LSB)** manipulation with precise bit-level control and correct handling of real-world image formats.
 
----
 
 ## 🚀 Demo
 
@@ -11,25 +10,27 @@ A modular **C-based steganography system** that hides encrypted messages inside 
 ./stego encode test_images/test1.bmp outputs/out.bmp "hello lokesh" key
 ./stego decode outputs/out.bmp key
 
-Output:
+```
+
+## Output:
 
 BMP Encoded Successfully
 Extracted length: 12
 Decoded: hello lokesh
 
-📸 Visual Proof
+## 📸 Visual Proof
 
 ### Original Image
-![original](outputs/original.png)
+![original](https://github.com/lokeshkumar80/LSB-Steganography-C/blob/main/outputs/original.png)
 
 
 ### Encoded Image
-![Encoded](outputs/out.png)
+![Encoded](https://github.com/lokeshkumar80/LSB-Steganography-C/blob/main/outputs/out.png)
 
 
 👉 Images appear identical — hidden data is invisible to the human eye.
 
-⚙️ Features
+## ⚙️ Features
 
 🔐 Encrypted payload embedding (XOR-based encryption)
 🧮 Bit-level LSB encoding & decoding
@@ -40,8 +41,9 @@ Decoded: hello lokesh
 🧪 CLI-based interface for encode/decode/analyze
 
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
+```bash
 LSB-Steganography-C/
 │
 ├── src/
@@ -58,35 +60,48 @@ LSB-Steganography-C/
 ├── docs/            # documentation (optional)
 ├── Makefile
 └── README.md
+```
 
-⚙️ Installation
+## ⚙️ Installation
 
-🐧 Linux / WSL
+## 🐧 Linux / WSL
+```bash
 sudo apt update
 sudo apt install build-essential libpng-dev
+```
 
-🔨 Build
+## 🔨 Build
+```bash
 make
+```
 
-▶️ Usage
+## ▶️ Usage
 
 Encode Message
+```bash
 ./stego encode input.bmp output.bmp "secret message" key
+```
 
 Decode Message
+```bash
 ./stego decode output.bmp key
+```
 
 Analyze Image
+```bash
 ./stego analyze output.bmp
+```
 
-🧪 Testing
+## 🧪 Testing
+```bash
 chmod +x scripts/test.sh
 ./scripts/test.sh
+```
 
-🧠 Architecture
+## 🧠 Architecture
 
 Encoding Pipeline
-
+```bash
 Input Image
    ↓
 Extract Pixel Data
@@ -99,8 +114,11 @@ Reconstruct Image
    ↓
 Stego Image
 
-⚠️ Key Engineering Challenges
+```
 
+## ⚠️ Key Engineering Challenges
+
+```
 1. BMP Row Padding
 BMP rows are aligned to 4 bytes
 Incorrect handling causes bit misalignment
@@ -114,37 +132,42 @@ Solved using sequential bit indexing
 XOR introduces null bytes
 Solved using binary-safe handling (not relying on strlen)
 
-📊 Results
-
+```
+## 📊 Results
+```
 Test Case	Status
 Short message	✅
 Long message	✅
 Special characters	✅
 Image integrity	✅
+```
+
 
 ✔ No visible distortion
 ✔ Accurate decoding
 ✔ Stable across runs
 
-🔬 Steganalysis
+## 🔬 Steganalysis
 
 Includes basic detection features:
 
-LSB distribution analysis
+LSB distribution analysis, 
 Statistical anomaly detection
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
+```
 AES encryption instead of XOR
 JPEG (DCT-based) steganography
 GUI interface
 Advanced steganalysis (ML-based)
+```
 
-📜 License
+## 📜 License
 
 MIT License
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Lokesh Kumar
 GitHub: https://github.com/lokeshkumar80
